@@ -8,14 +8,12 @@
 
   <!-- Define a traditional camel context here -->
   <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-
     <route id="rest-getPersonId">
       <from uri="direct:getPersonId"/>
       <log message="This request is handled by this POD: {{env:HOSTNAME}}"/>
       <setBody>
-        <simple>Hey ${headers.personId}, | POD : {{env:HOSTNAME}} \n</simple>
+         <simple> &lt;p&gt; Hey ${headers.personId}, | POD : {{env:HOSTNAME}} &lt;/p&gt; </simple>
       </setBody>
     </route>
-
   </camelContext>
 </beans>
