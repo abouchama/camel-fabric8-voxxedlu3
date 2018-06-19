@@ -114,6 +114,21 @@
                 </executions>
                 <version>${spring-boot.version}</version>
             </plugin>
+
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>${fabric8.maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>resource</goal>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -163,7 +178,7 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <profiles>
+    <!--profiles>
         <profile>
             <id>openshift</id>
             <build>
@@ -193,5 +208,5 @@
                 </plugins>
             </build>
         </profile>
-    </profiles>
+    </profiles-->
 </project>
