@@ -18,7 +18,8 @@
         <fabric8.version>3.0.11.fuse-000039-redhat-1</fabric8.version>
 
         <!-- versions of Maven plugins -->
-        <fabric8.maven.plugin.version>3.5.33.fuse-000067-redhat-1</fabric8.maven.plugin.version>
+        <!--fabric8.maven.plugin.version>3.5.33.fuse-000067-redhat-1</fabric8.maven.plugin.version-->
+        <fabric8.maven.plugin.version>3.5.39</fabric8.maven.plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -80,19 +81,8 @@
   </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>io.fabric8</groupId>
-                    <artifactId>fabric8-maven-plugin</artifactId>
-                    <version>${fabric8.maven.plugin.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
             <!-- Core plugins -->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -177,36 +167,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
-    <!--profiles>
-        <profile>
-            <id>openshift</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>io.fabric8</groupId>
-                        <artifactId>fabric8-maven-plugin</artifactId>
-                        <configuration>
-                            <build>
-                                <from>fabric8/s2i-java</from>
-                            </build>
-                            <enricher>
-                                <excludes>
-                                    <exclude>fmp-openshift-route</exclude>
-                                </excludes>
-                            </enricher>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>resource</goal>
-                                    <goal>build</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles-->
 </project>
