@@ -12,7 +12,7 @@
       <from uri="direct:getPersonId"/>
       <log message="This request is handled by this POD: {{env:HOSTNAME}}"/>
       <setBody>
-         <simple> &lt;p&gt; Hey ${headers.personId}, | POD : {{env:HOSTNAME}} &lt;/p&gt; </simple>
+         <simple> &lt;p&gt; Welcome " ${headers.personId} " to the #Voxxed_Lu Demo, | POD : {{env:HOSTNAME}} &lt;/p&gt; </simple>
       </setBody>
     </route>
   </camelContext>
