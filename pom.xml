@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.redhat</groupId>
-  <artifactId>camel-fabric8-voxxedlu</artifactId>
+  <artifactId>camel-fabric8-voxxedlu3</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel XML</name>
@@ -78,11 +78,11 @@
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
       </dependency>
-      <!--dependency>
+      <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-core</artifactId>
         <version>1.1.0</version>
-       </dependency-->
+       </dependency>
   </dependencies>
 
     <build>
